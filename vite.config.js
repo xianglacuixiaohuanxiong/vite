@@ -2,8 +2,10 @@ const path = require('path');
 const resolve = dir => path.resolve(__dirname, dir);
 module.exports = {
   alias: {
-    '@': '/src',
-    'components': '/src/components'
+    'ElementUI': 'element-ui',
+    '/@/': resolve('src'),
+    '/components/': resolve('src/components'),
+    '/utils/': resolve('uilts')
   },
   proxy: {
     // string shorthand
@@ -14,5 +16,9 @@ module.exports = {
       changeOrigin: true,
       rewrite: path => path.replace(/^\/api/, '')
     }
+  },
+  //  三方ui
+  optimizeDeps: {
+    include: ['ElementUI']
   }
 }
