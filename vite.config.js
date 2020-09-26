@@ -18,7 +18,7 @@ module.exports = {
     }
   },
   //  三方ui
-  optimizeDeps: {
-    include: ['ElementUI']
-  }
+  // optimizeDeps: {
+  //   include: ['ElementUI']
+  // }
 }
